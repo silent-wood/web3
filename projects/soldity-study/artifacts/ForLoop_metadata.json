@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "initial",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "end",
+						"type": "int256"
+					}
+				],
+				"name": "loop",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "n",
+						"type": "uint16"
+					}
+				],
+				"name": "sumToN",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/2.control/Loop.sol": "ForLoop"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2.control/Loop.sol": {
+			"keccak256": "0x016599283573b43154f731e7ea199d60e88ede035569168636d40d9ea942d5b3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e5d34a3d3739a0d5cc2809512cf17f0d7777782bf5fbbe7ef3d2c03db8155e42",
+				"dweb:/ipfs/QmSs2sLc76r4A9kC5jFu6m8G3m1kuDdsAJ4FRH64bpHN4L"
+			]
+		}
+	},
+	"version": 1
+}

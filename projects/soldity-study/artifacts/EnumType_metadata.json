@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "enum EnumType.ActionChoices",
+						"name": "c",
+						"type": "uint8"
+					}
+				],
+				"name": "enumToUint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMaxVal",
+				"outputs": [
+					{
+						"internalType": "enum EnumType.ActionChoices",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMinVal",
+				"outputs": [
+					{
+						"internalType": "enum EnumType.ActionChoices",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "uintToEnum",
+				"outputs": [
+					{
+						"internalType": "enum EnumType.ActionChoices",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EnumType.sol": "EnumType"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EnumType.sol": {
+			"keccak256": "0xe05a91781c5577a0a082d10724c9ddde2c94339787f18fc827e0f58dc8396b76",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3f98abdade71a81ed711397334686ac8caa49a7f3dcfcdb4c36e51dce76578f",
+				"dweb:/ipfs/QmX11kpSitRuDYmZJjpCjqaDKb1EPLUb668qBpF4SLTyFF"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "numbers",
+						"type": "uint256[]"
+					}
+				],
+				"name": "sum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "total",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"sum(uint256[])": {
+					"params": {
+						"numbers": "无符号整数数组，长度任意"
+					},
+					"returns": {
+						"total": "数组元素的总和"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"sum(uint256[])": {
+					"notice": "计算无符号整数数组的总和"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/5.test/test.sol": "Utils"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/5.test/test.sol": {
+			"keccak256": "0xd8fd363dd363338e7682d9018bf7893a91a10e7eac1ffb9ed353fcbb63a24c02",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://35943dda532a55f546e42b01e3167554a3562458a08826b5cc6c468f62490c87",
+				"dweb:/ipfs/Qmb3pZWcR18zy3aSqVnoWSiHoocZJFRYqzX1ijhAt1xLMK"
+			]
+		}
+	},
+	"version": 1
+}

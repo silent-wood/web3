@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "自定义值类型类似于别名，不具备原始类型的操作符(+,-,*,/等) 语法：type C(新类型) is V(原生类型)",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SafeType.sol": "UserDefineType"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SafeType.sol": {
+			"keccak256": "0x5aa3e451957afbcd0630d53b97dbdb89f8ac83ec2e563b391f28db31bfb1fdf5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aa44457970ef2184aa2c55bba31c98fea03a376954e0515ad0ada222ef74ce6f",
+				"dweb:/ipfs/QmXVHSFruTdt23u3CpZzs7vmPrWvzsJbXm5AZm5GVnipNQ"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "foo1",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/4.contract/继承.sol": "C2"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/4.contract/继承.sol": {
+			"keccak256": "0x8988bf39c2c63f69e200a2b310e7aa85778bf9ae3f37682911b4e631eb76252a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd6cc3b605b33d0c4a3301b68d5cb9a492cd37bea4c13aefacc582994bcc7df5",
+				"dweb:/ipfs/QmdeZnnr4dEPqdtXaK7o9WBg2xxiRffV8pFMQCYN2g8h9N"
+			]
+		}
+	},
+	"version": 1
+}

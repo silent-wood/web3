@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/4.contract/const_immut.sol": "ConstAndImmutable"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/4.contract/const_immut.sol": {
+			"keccak256": "0x2ab15d2c7628e340487d6fa014fe1a2dfa3ad0cf50df88e3e6d804f1d8868ccd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d975e6b5bbf115a04a9bc33d6a395d0ee97274b2b242013728ac3a4002f13a04",
+				"dweb:/ipfs/QmeH2trNEhDPAYUxaHRmTs7CLjHtxUsgJB1wYt8dZeUH3W"
+			]
+		}
+	},
+	"version": 1
+}

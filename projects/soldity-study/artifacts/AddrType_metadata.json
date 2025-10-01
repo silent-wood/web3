@@ -1,0 +1,82 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "trans",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getBalance()": {
+					"notice": "地址类型的成员变量 balance: 账户地址的余额(wei) code: 代码 codehash: 代码hash值"
+				},
+				"trans()": {
+					"notice": "成员函数 <address payable addr>.transfer(uint256 amount): 向地址类型addr转账，数额为amount, 失败抛出异常 <address payable addr>.send(uint256 amount) returns (bool): 向地址类型addr发送amount的wei,返回布尔值 address.call(bytes memory) returns (bool, bytes memory): 调用其他合约的函数 address.delegatecall(bytes memory) returns (bool, bytes memory): 与call类似，但使用当前合约的上下文来调用其他合约中的函数，修改的是当前合约的数据存储。 address.staticcall(bytes memory) returns (bool, bytes memory): 与call类似，但是不会修改当前合约和调用的合约内部的状态 "
+				}
+			},
+			"notice": "以太坊中有两种账户类型 外部账户(extenally owned address简称EOA): MateMask上创建的账户 合约账户(contract address 简称CA): 部署合约后生成的地址",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AddrType.sol": "AddrType"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AddrType.sol": {
+			"keccak256": "0x7007b1b7b5dd8d04d81cb788054c6a3650c861832ac95962fabd5b6dd5194654",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53126d9287b59932daf4b4587f20121fe27440ffa134af383ac7c5c96409d091",
+				"dweb:/ipfs/QmejX1k1MMtHh2xfLwb1teTaiAdtpicbmcmwjm9U7qCdbm"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x7434453e6d3b7d0e5d0eb7846ffdbc27f0ccf3b163591263739b628074dc103a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49355f780520494d1d5a0f01858385e51bb5280ce0ecfb960f16995065dca395",
+				"dweb:/ipfs/QmSwJ6C5QLz6xKeQZS8wbwjU1KxRFTYfwbGmtzisd5sRW4"
+			]
+		}
+	},
+	"version": 1
+}

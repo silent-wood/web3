@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "utterance",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/4.contract/abstract.sol": "Feline"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/4.contract/abstract.sol": {
+			"keccak256": "0x84ce1f63f956ffa8adfe7a1110c41b7738d8da057f6091efce2428046f035ef9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5cd3b98e7f49661fb2027960079c83e1ff9b9276d5c49be55a4981ad73bfbc1a",
+				"dweb:/ipfs/QmZu3R7v8PTatF7SgYBNLaR9xziv6xUWAndkSW18nDt3fh"
+			]
+		}
+	},
+	"version": 1
+}

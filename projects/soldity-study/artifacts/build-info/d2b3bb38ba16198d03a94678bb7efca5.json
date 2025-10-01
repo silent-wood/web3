@@ -1,0 +1,69 @@
+{
+	"id": "d2b3bb38ba16198d03a94678bb7efca5",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/4.contract/库合约.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.1;\r\n\r\n/**\r\n* 导入方式\r\n* 通过文件位置导入\r\n    * import \"xxx.sol\";\r\n    * import { libraryName } from \"xxx.sol\"\r\n    * import \"xxx.sol\" as libraryName;\r\n    * import * as libraryName from \"xxx.sol\";\r\n    * import { libraryName as newName } from \"xxx.sol\";\r\n* npm 包的方式\r\n* import \"@openzepplein/contracts/access/Ownable.sol\" \r\n* 通过网址引用\r\n* import \"https://github.com/Openzepplein/xxxxx.sol\";\r\n*/\r\n\r\n/** \r\n* 库合约特性\r\n    * 它们不能有状态变量\r\n    * 它们不能继承，也不能被继承\r\n    * 它们不能接收以太\r\n    * 它们不能被销毁\r\n*/\r\n\r\n/**\r\n* 库合约调用\r\n    * z直接通过库合约签名调用，更节省gas\r\n    * 使用using A for B 指令，这样库合约A中的函数会变成B类型的成员函数\r\n*/\r\n\r\n// using Strings for uint256;\r\n// function getString1(uint256 _number) public pure returns(string memory) {\r\n//     // 库合约中的函数会自动添加为uint256的成员\r\n//     return _number.toHexString();\r\n// }\r\n\r\n// 直接通过库合约签名调用\r\n// function getStrings(uint256 _number) public pure returns(string memory) {\r\n//     return Strings.toHexString();\r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"contracts/4.contract/库合约.sol": {
+				"ast": {
+					"absolutePath": "contracts/4.contract/库合约.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".1"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						}
+					],
+					"src": "33:1186:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Test",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "fn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/4.contract/interface.sol": "Name"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/4.contract/interface.sol": {
+			"keccak256": "0xfaf9d97bb245aaa3aa72f6610c7f62b41fd6924cbe1bd8ef593247f26999ddfa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74203e8e283afe500f68ddc21f96962cfe560ecd4c971b3a4827fafd363220f7",
+				"dweb:/ipfs/QmdzVSRyTkpztvszc6AWntY4wKWn2LmbmXpcLBUtWpWG4Y"
+			]
+		}
+	},
+	"version": 1
+}
