@@ -16,6 +16,7 @@
     "function admin() view returns (address)",
     "function auctions(uint256) view returns (address,uint256,uint256,uint256,bool,address,uint256,address,uint256)",
     "function createAuction(uint256,uint256,address,uint256)",
+    "function endAuction(uint256)",
     "function initialize()",
     "function nextAuctionId() view returns (uint256)",
     "function playerBid(uint256) payable",

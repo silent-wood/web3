@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "hardhat/console.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol"; // 导入ERC721合约
 
 contract NftAuction is Initializable, UUPSUpgradeable {
   // 结构体
@@ -44,14 +45,19 @@ contract NftAuction is Initializable, UUPSUpgradeable {
     admin = msg.sender;
   }
   /** 创建拍卖 */
-  function createAuction(uint256 _duration, uint256 _startPrice, address _nftContract, uint256 _tokenId) public {
+  function createAuction(uint256 _duration, uint256 _startPrice, address _nftAddress, uint256 _tokenId) public {
     // 检查参数
     // 只有管理员才可以创建拍卖
     require(msg.sender == admin, "only admin");
-    // 持续时间必须大于1分钟
-    require(_duration > 1000 * 60, "duration must be > 1 minute");
+    // 持续时间必须大于10秒
+    require(_duration >= 10, "duration must be > 10 seconds");
     // 起拍价必须大于0
     require(_startPrice > 0, "startPrice must be > 0");
+
+    // 转移NFT到合约地址
+    IERC721(_nftAddress).approve(admin, _tokenId);
+    // IERC721(_nftAddress).transferFrom(msg.sender, address(this), _tokenId);
+
     // 创建拍卖
     auctions[nextAuctionId] = Auction({
       seller: msg.sender,
@@ -61,7 +67,7 @@ contract NftAuction is Initializable, UUPSUpgradeable {
       highestBidder: address(0),
       highestBid: 0,
       startTime: block.timestamp,
-      nftContract: _nftContract,
+      nftContract: _nftAddress,
       tokenId: _tokenId
     });
     nextAuctionId++;
@@ -82,6 +88,19 @@ contract NftAuction is Initializable, UUPSUpgradeable {
     // 更新最高出价者和最高出价
     auction.highestBidder = msg.sender;
     auction.highestBid = msg.value;
+  }
+
+  // 结束拍卖
+  function endAuction(uint256 _auctionId) public {
+    Auction storage auction = auctions[_auctionId];
+    // 判断当前拍卖是否结束
+    require(!auction.ended && (auction.startTime + auction.duration < block.timestamp), "auction not ended");
+    // 转移NFT到最高出价者
+    IERC721(auction.nftContract).transferFrom(admin, auction.highestBidder, auction.tokenId);
+    // 转移剩余资金到卖家
+    // payable(address(this)).transfer(address(this).balance);
+    // 标记拍卖结束
+    auction.ended = true;
   }
 
   // 身份验证，需要自己实现
