@@ -114,6 +114,7 @@ module.exports = async ({getNamedAccounts}) => {
 module.exports.tags = ["deployNftAuction"];
 ```
 当运行 `npx hardhat deploy` 命令后，会生成一个文件，文件位置是`storePath`
+-> npx hardhat deploy --tags xxx 这个命令可以部署一个特定的合约，xxx是机遇deploy文件夹中某个文件的module.exports.tags = ["xxx"];
 
 ## 合约升级
 ### 透明代理

@@ -4,8 +4,9 @@ pragma solidity ^0.8.28;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "hardhat/console.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract NftAuction is Initializable {
+contract NftAuction is Initializable, UUPSUpgradeable {
   // 结构体
   struct Auction {
     /** 卖家 */
@@ -81,5 +82,11 @@ contract NftAuction is Initializable {
     // 更新最高出价者和最高出价
     auction.highestBidder = msg.sender;
     auction.highestBid = msg.value;
+  }
+
+  // 身份验证，需要自己实现
+  function _authorizeUpgrade(address newImplementation) internal override view {
+    // 只有管理员才可以升级合约
+    require(msg.sender == admin, "only admin can upgrade");
   }
 }
