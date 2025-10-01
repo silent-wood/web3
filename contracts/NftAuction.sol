@@ -5,8 +5,9 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "hardhat/console.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; // 导入ERC20合约
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol"; // 导入ERC721合约
-import { AggregatorV3Interface } from "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol"; // 导入Chainlink价格预言机接口
+import { AggregatorV3Interface } from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol"; // 导入Chainlink价格预言机接口
 
 contract NftAuction is Initializable, UUPSUpgradeable {
   // 结构体
@@ -59,15 +60,14 @@ contract NftAuction is Initializable, UUPSUpgradeable {
   /** 获取Chainlink数据预言机最新价格 */
   function getChainlinkDataFeedLatestAnswer(address tokenAddress) public view returns (int) {
     AggregatorV3Interface priceETHFeed = priceFeeds[tokenAddress];
-      (
-          // uint80 roundId,
-          int256 answer,
-          // uint256 startedAt,
-          // uint256 updatedAt,
-          // uint80 answeredInRound
-      ) = priceETHFeed.latestRoundData();
-      return answer;
-    }
+    (
+            /* uint80 roundId */,
+            int256 answer,
+            /*uint256 startedAt*/,
+            /*uint256 updatedAt*/,
+            /*uint80 answeredInRound*/
+        ) = priceETHFeed.latestRoundData();
+        return answer;
   }
 
   /** 创建拍卖 */
@@ -102,6 +102,9 @@ contract NftAuction is Initializable, UUPSUpgradeable {
 
   // 买家出价
   function playerBid(uint256 _auctionId, uint256 amount, address _tokenAddress) public payable {
+    // console.log(amount, "amount");
+    // console.log(_tokenAddress, "tokenAddress");
+    // console.log(address, "address");
     // 检查拍卖是否存在
     Auction storage auction = auctions[_auctionId];
     // 判断当前拍卖是否结束, 只有在拍卖结束后才能出价
@@ -157,6 +160,7 @@ contract NftAuction is Initializable, UUPSUpgradeable {
 
   // 身份验证，需要自己实现
   function _authorizeUpgrade(address newImplementation) internal override view {
+    console.log("authorize upgrade to:", newImplementation);
     // 只有管理员才可以升级合约
     require(msg.sender == admin, "only admin can upgrade");
   }
